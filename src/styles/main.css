@@ -167,11 +167,11 @@ section.home.parallax::after {
 }
 
 section.home.parallax-1{
-  background-image: url('../../public/banner1.jpg');
+  background-image: url('https://d28wli5o6hs44i.cloudfront.net/banner1.jpg');
 }
 
 section.tranding.parallax-2{
-  background-image: url('../../public/banner2.jpg');
+  background-image: url('https://d28wli5o6hs44i.cloudfront.net/banner2.jpg');
 }
 
 .home-container {
