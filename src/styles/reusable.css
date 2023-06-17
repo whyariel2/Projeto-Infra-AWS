@@ -1,0 +1,168 @@
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section-title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1rem;
+}
+
+.section-title span {
+  color: var(--second-color);
+}
+
+.section-subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--second-color);
+}
+
+.main {
+  overflow: hidden; /* For the animations ScrollReveal*/
+}
+
+.button {
+  display: inline-block;
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  background: var(--first-color);
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mb-1 {
+  margin-bottom: .5rem;
+}
+
+/* =============== DROPDOWN ================= */
+
+.select-menu {
+  background: transparent;
+  padding: 1.25rem 0.75rem 0 0.75rem;
+  font-size: var(--h3-font-size);
+  font-weight: 500;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.select-btn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 2px solid var(--first-color);
+ }
+
+.select-menu .options {
+  padding: .5rem;
+  margin-top: .5rem;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.options .option {
+  height: 2rem;
+  cursor: pointer;
+  margin-bottom: .5rem;
+  border-bottom: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.options .option:hover {
+  border-bottom: 2px solid var(--first-color);
+}
+
+.dropdown-arrow {
+  display: inline;
+  padding: .25rem;
+  font-size: 1.5rem;
+  margin-left: auto;
+}
+
+.dropdown-arrow i{
+  transition: .4s;
+}
+
+.dropdown-options {
+  overflow: hidden;
+  height: 0;
+  transition: all .25s ease;
+}
+
+/* Rotate arrow */
+.dropdown-open .dropdown-arrow i {
+  transform: rotate(180deg);
+}
+/* ============== CARD ================= */
+.showcase-card {
+  max-width: 368px;
+  background-color: var(--body-color);
+  padding: .5rem .5rem 1.5rem;
+  border-radius: .5rem;
+  margin: 0 auto;
+  transition: .4s;
+}
+
+.showcase-img {
+
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
+
+.showcase-data {
+  padding: 0 1rem 0 .5rem;
+  /* justify-content: center; */
+}
+
+.showcase-title {
+  font-size: var(--h2-font-size) ;
+  color: var(--title-color);
+  margin-bottom: .25rem;
+}
+
+.showcase-subtitle {
+  font-size: var(--h3-font-size);
+  font-weight: 300;
+  margin-bottom: .75rem;
+}
+
+
+/*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar{
+  width: .4rem;
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #ffd856;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: #ffd856;
+
+}
+
+.options::-webkit-scrollbar{
+  border-radius: 1.5rem;
+ }
+ 
+ .options::-webkit-scrollbar-track{
+   border-radius: 1.5rem;
+  }
+ 
+  .options::-webkit-scrollbar-thumb{
+   border-radius: 1.5rem;
+  }
+
+

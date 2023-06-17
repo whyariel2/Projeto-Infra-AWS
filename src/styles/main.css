@@ -1,0 +1,537 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --first-color: #ffcc15;
+  --first-color-alt: #f2b705;
+  --first-color-light: #ffec3f;
+  --first-color-lighten: #fff7ad;
+  --second-color: #B38D07;
+  --title-color: #411700;
+  --text-color: #575757;
+  --text-color-light: #8C8C8C;
+  --border-color: #F4F5F8;
+  --body-color: #fff;
+  --container-color: #ACB7CD;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --footer-font: "Open Sans", sans-serif;
+  --biggest-font-size: 2.75rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-light: 300;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font-family: var(--body-font);
+  outline: none;
+  border: none;
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.25);
+  z-index: 10;
+  transition: .4s;
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--second-color);
+  transition: 0.2s;
+}
+
+.nav-link i{
+  font-size: 1rem;
+}
+
+.nav-logo {
+  height: 3rem;
+}
+
+.nav-button {
+  padding: .5rem 1rem;
+}
+
+
+/* Change background header */
+.scroll-header {
+  background-color: var(--border-color);
+  box-shadow: 0px 1px 4px #F4F5F833;
+}
+
+
+/* Active link */
+.active-link {
+  background: linear-gradient(150deg, #FFCC15 0%, #DFAE00 100%);
+  color: var(--title-color) !important;
+  box-shadow: 0 4px 8px rgba(20, 20, 20, 0.05);
+}
+/*=============== HOME ===============*/
+section.home.parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+}
+
+section.home.parallax::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 50%,#000 100% );
+}
+
+section.home.parallax-1{
+  background-image: url('../../public/banner1.jpg');
+}
+
+section.tranding.parallax-2{
+  background-image: url('../../public/banner2.jpg');
+}
+
+.home-container {
+  align-items: center;
+  gap: 2rem;
+  z-index: 1;
+}
+
+.home-content {
+  display: grid;
+  column-gap: 2.5rem;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 1rem 2rem;
+  color: #fff;
+  background: rgba(20, 20, 20, 0.4);
+  box-shadow: 2px 4px 8px 2px rgba(244, 245, 248, 0.2);
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+.home-data {
+  text-align: center;
+}
+
+.home-subtitle {
+  font-size: var(--h3-font-size);
+  margin-bottom: .5rem;
+  font-weight: var(--font-light);
+  color: #ffffff;
+}
+
+.home-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-medium);
+  color: var(--border-color);
+  margin-bottom: 1rem;
+}
+
+.dropdown-btn {
+  margin-top: 3rem;
+  font-size: var(--h3-font-size);
+}
+
+/*=============== SHOWCASE ===============*/
+section.showcase .showcase-container {
+  padding: 1rem 0 5rem;
+}
+
+.showcase-icon {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.showcase-icon .icon-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-icon .icon-grid i {
+  font-size: var(--h1-font-size);
+  color: var(--second-color);
+}
+
+.showcase-icon .icon-grid span {
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+
+/* Hover Animation */
+section.showcase .showcase-card:hover {
+  box-shadow: 2.10286px 6px 12px hsla(228, 66%, 45%, .1);
+}
+
+/* Swiper class */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: '';
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: initial;
+  bottom: 0;
+  width: initial;
+  height: initial;
+  background-color: var(--body-color);
+  border: 2px solid var(--text-color);
+  padding: 6px;
+  border-radius: .5rem;
+  font-size: 1.5rem;
+  color: var(--second-color);
+}
+
+.swiper-button-prev{
+  left: calc(50% - 3rem);
+}
+
+.swiper-button-next {
+  right: calc(50% - 3rem);
+}
+
+/*=============== BREAKING NEWS ===============*/
+section.subscribe {
+  background: var(--first-color);
+  box-shadow: inset 0px 8px 12px rgba(0, 0, 0, 0.15);
+  padding: 4rem 0;
+}
+
+.subscribe-container {
+  flex-direction: row;
+  row-gap: 3rem;
+}
+
+.subscribe-img{
+  height: 130px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-data .subscribe-title{
+  font-size: var(--h1-font-size);
+}
+
+.subscribe-title span {
+  color: var(--second-color);
+}
+
+.subscribe-data .subscribe-subtitle{
+  font-size: var(--h3-font-size);
+  font-weight: 400;
+}
+
+/* ======== BUTTON ========== */
+.subscribe-btn {
+  color: var(--title-color);
+  text-decoration: underline;
+  font-weight: 300;
+}
+
+/*=============== NEWS ===============*/
+section.news .news-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  font-size: var(--h3-font-size);
+  padding: .5rem 1rem;
+  box-shadow: none;
+}
+
+.news-description {
+  font-size: var(--small-font-size);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+section.news .showcase-container {
+  padding: 1rem 0;
+}
+
+/* Hover Animation */
+section.news .showcase-card:hover {
+  box-shadow: 2.10286px 6px 12px hsla(228, 66%, 45%, .1);
+}
+
+/*=============== TRANDING ===============*/
+section.tranding {
+  padding: 3.5rem 0;
+}
+
+section.tranding.parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+
+}
+
+section.tranding.parallax::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 20%,rgba(0, 0, 0, 0.53) 90% );
+}
+
+.popular-container {
+  z-index: 1;
+}
+
+.popular-title {
+  font-size: var(--h1-font-size);
+  color: var(--border-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.popular-data {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.popular-btn {
+  display: block;
+  color: var(--border-color);
+  font-size: var(--normal-font-size);
+  padding: .5rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: .5rem;
+}
+
+
+
+/*=============== LOCATION ===============*/
+.location-contant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.location-contant iframe {
+  width: 100%;
+  height: 50vh;
+  border: none;
+}
+
+
+/* ================ FOOTER BREAKPOINT ============ */
+.footer-breakpoint {
+  height: 3rem;
+  background: var(--first-color);
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/*=============== FOOTER ===============*/
+.footer-container {
+  margin-top: 1rem;
+  row-gap: 2.5rem;
+}
+
+.footer-logo {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-link {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.footer-content,
+.footer-links {
+  display: grid;
+}
+
+.footer-content {
+  grid-template-columns: repeat(2, max-content);
+  gap: 2.5rem 4rem;
+  justify-content: center;
+}
+
+.footer-title {
+  color: var(--text-color);
+  font-size: var(--h3-font-size);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  row-gap: 0.5rem;
+}
+
+.footer-link {
+  color: var(--text-color-light);
+  transition: .3s;
+}
+
+.footer-link:hover {
+  color: var(--text-color);
+}
+
+.footer-social i {
+  font-size: 1.25rem;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.footer-info,
+.footer-privacy {
+  display: flex;
+}
+
+.footer-info {
+  padding-bottom: 6rem;
+  margin-top: 5.5rem;
+  flex-direction: column;
+  text-align: center;
+  row-gap: 1.5rem;
+}
+
+.footer-copy,
+.footer-privacy a {
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+}
+
+.footer-privacy {
+  justify-content: center;
+  column-gap: 1.25rem;
+}
+
+/*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: var(--body-color);
+  box-shadow: 0 8px 12px hsla(228, 66%, 45%, .1);
+  display: inline-flex;
+  padding: .35rem;
+  border-radius: .25rem;
+  color: var(--title-color);
+  font-size: 1.25rem;
+  z-index: 10;
+  transition: .3s;
+}
+
+.scrollup:hover {
+  transform: translateY(-.25rem);
+  background-color: var(--first-color-alt);
+}
+
+.show-scroll{
+  bottom: 8rem;
+}
