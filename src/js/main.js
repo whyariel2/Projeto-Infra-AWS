@@ -6,8 +6,8 @@ const scrollHeader = () =>{
   this.scrollY >= 100 ? header.classList.add('scroll-header')
                      : header.classList.remove('scroll-header');
   
-  this.scrollY>= 100 ? img.setAttribute('src', '/src/assets/logo-black.svg')
-                     : img.setAttribute('src', '/src/assets/logo-white.svg')
+  this.scrollY>= 100 ? img.setAttribute('src', 'https://d28wli5o6hs44i.cloudfront.net/assets/logo-black.svg')
+                     : img.setAttribute('src', 'https://d28wli5o6hs44i.cloudfront.net/assets/logo-white.svg')
                       
 
 }
@@ -54,7 +54,7 @@ var swiperShowcase = new Swiper('.showcase-container', {
   spaceBetween: 80,
   grabCursor: true,
   centeredSlides: true,
-  slidePerView: 3,
+  slidePerView: 'auto',
   loop: true,
 
   navigation: {
@@ -65,20 +65,24 @@ var swiperShowcase = new Swiper('.showcase-container', {
   breakpoints: {
     1024: {
       slidesPerView: 3,
-      spaceBetween: 80
+      spaceBetween: 80,
+      loop: true
     },
     720: {
-      slidesPerView: 3,
-      spaceBetween: 80
+      slidesPerView: 2,
+      spaceBetween: 32,
+      loop: true
     },
     540: {
-      slidesPerView: 2,
-      spaceBetween: 32
+      slidesPerView: 1,
+      spaceBetween: 32,
+      loop: true
     },
     320: {
       slidesPerView: 1,
-      spaceBetween: 32
-    }
+      spaceBetween: 32,
+      loop: true
+    }      
   }
 });
 
