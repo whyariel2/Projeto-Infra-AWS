@@ -146,7 +146,7 @@
 /* For large devices */
 @media screen and (min-width: 1023px) {
   .section{
-    padding: 7.5rem 0 1rem;
+    padding: 7rem 0 1rem;
   }
 
   .section-title{
@@ -208,9 +208,80 @@
     color: var(--title-color);
   }
 
-  /*=== HOME SECTION ===*/
-  .home{
-    padding-bottom: 0;
+  /*=== HOME SECTION ===*/  
+  .home-container{
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    column-gap: 2.5rem;
+  }
+
+  .home-title{
+    font-size: 3.25rem;
+  }
+
+  .menu-content{
+    grid-template-columns: repeat(2, 12fr);
+    column-gap: 2.5rem;
+  }
+
+  /* DROPDOWN MENU */
+  .select-menu{
+    font-size: var(--normal-font-size);
+  }
+
+  .dropdown-btn{
+    font-size: var(--normal-font-size);
+    padding: 0.5rem 1rem;
+  }
+
+  /* === SHOWCASE === */
+  section.showcase .showcase-container{
+    padding-top: 2rem;
+  }
+  
+  .showcase-card{
+    width: 320px;
+    padding: .75rem .75rem 2rem;
+  }
+
+  .showcase-title{
+    font-size: var(--h3-font-size);
+    padding-bottom: .3rem;
+  }
+
+  .showcase-subtitle{
+    font-size: var(--normal-font-size);
+    padding-bottom: 1rem;
+  }
+
+  .showcase-icon{
+    font-size: var(--normal-font-size);
+  }
+
+  .showcase-icon .icon-grid i{
+    font-size: var(--h2-font-size);
+  }
+
+  /* === NEWS === */
+  .subscribe-container{
+    grid-template-columns: repeat(2);
+    column-gap: 3rem;
+  }
+
+  .subscribe-container .subscribe-data{
+    grid-column: 2 / 4;
+  }
+
+  section.subscribe .subscribe-title {
+    font-size: 2rem;
+  }
+
+  section.subscribe .subscribe-subtitle {
+    font-size: var(--normal-font-size);
+  }
+
+  .subscribe-btn{
+    font-size: var(--small-font-size);
   }
 }
 

@@ -65,7 +65,7 @@ var swiperShowcase = new Swiper('.showcase-container', {
   breakpoints: {
     1024: {
       slidesPerView: 3,
-      spaceBetween: 80,
+      spaceBetween: 32,
       loop: true
     },
     720: {
