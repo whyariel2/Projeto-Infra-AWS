@@ -319,6 +319,30 @@
     padding-bottom: .5rem;
   }
 
+  .footer-links{
+    row-gap: 1rem;
+  }
+
+}
+
+@media screen and (min-width: 1040px){
+  .container{
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
+  .menu-content{
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .logo-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-info{
+    gap: .25rem;
+  }
 }
 
 /* For 2K & 4K resolutions */
